@@ -1,0 +1,26 @@
+% ============================================================
+% Riesgos del PFC derivados de la Relación con la Unidad 1
+% Responsable: Sánchez Vera Darwin Joel
+% Mismo formato que 05_lecciones_pfc.tex para agruparlos después.
+% ============================================================
+\subsection*{Riesgos derivados de la Unidad 1}
+Propuestas para el PFC, no hechos ocurridos en UTEQ. Se derivan de la transparencia ante fallos, el teorema CAP y la tolerancia a fallos analizados en el caso de Fastly.
+
+\begingroup
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\linewidth}{@{}YY@{}}
+\toprule
+Riesgo y consecuencia & Medida preventiva comprobable en TA-PFC-E1 \\
+\midrule
+\textbf{Sistema de Pre-Sustentaciones:} se pierde la conexión con PostgreSQL mientras un docente registra una nota; la pantalla no responde y el docente reintenta. \textbf{Consecuencia:} nota duplicada o guardada sin que el docente lo sepa. Analogía: decidir qué propiedad proteger ante un fallo~\cite{brewer2012}.
+& Priorizar la consistencia: guardar la nota en una sola transacción, confirmarla solo después de guardarse y usar un identificador único para que un reintento no la duplique. En el prototipo, cortar la conexión durante el registro y comprobar que no hay duplicados y que el docente ve si la nota se guardó. \\
+\addlinespace
+\textbf{Sistema de Pre-Sustentaciones:} las copias de seguridad de PostgreSQL se guardan en el mismo servidor que la base. \textbf{Consecuencia:} un único fallo del servidor elimina datos y respaldo; se pierden solicitudes y notas. Analogía: redundancia que comparte la misma causa de fallo~\cite{avizienis2004}.
+& Programar una copia automática en un destino independiente del servidor de la base. En el prototipo, restaurar esa copia en otro equipo y comprobar que las solicitudes y notas están completas. \\
+\addlinespace
+\textbf{Sistema de Pre-Sustentaciones:} tras un despliegue o un cambio, las solicitudes empiezan a fallar y no hay registros que indiquen qué cambió. \textbf{Consecuencia:} el equipo tarda en hallar la causa y el servicio sigue caído. Analogía: Fastly detectó en un minuto, pero tardó 40 en identificar la configuración~\cite{fastly2021}.
+& Registrar cada despliegue o cambio con fecha y responsable, y cada error con fecha, usuario y versión. En el prototipo, provocar un error tras un cambio y medir cuánto se tarda en ubicar la causa usando solo esos registros. \\
+\bottomrule
+\end{tabularx}
+\endgroup
