@@ -13,7 +13,7 @@ PFC: Sistema de Gestión de Pre-Sustentaciones de trabajos de titulación de la 
 
 ## Archivos
 
-- `informe/jilmar.tex`: aporte individual compilable.
+- `informe/informe.tex`: aporte individual compilable.
 - `informe/secciones/`: descripción, tabla y tres riesgos del PFC.
 - `informe/referencias.bib`: fuente oficial verificada.
 - `diagramas/`: espacio para el diagrama editable de Angello.
@@ -27,14 +27,14 @@ Requiere MiKTeX o TeX Live con pdfLaTeX y BibTeX. Desde la carpeta `informe`, co
 ```powershell
 pdflatex caratula.tex
 Copy-Item caratula.pdf entrega/Entrega_SGA_FORM-AC-01.pdf
-pdflatex jilmar.tex
-bibtex jilmar
-pdflatex jilmar.tex
-pdflatex jilmar.tex
-Copy-Item jilmar.pdf entrega/form-ac-01_fastly.pdf
+pdflatex informe.tex
+bibtex informe
+pdflatex informe.tex
+pdflatex informe.tex
+Copy-Item informe.pdf entrega/form-ac-01_fastly.pdf
 ```
 
-En Overleaf, subir `informe/`, compilar `caratula.tex` y guardar su PDF como `entrega/Entrega_SGA_FORM-AC-01.pdf`; después seleccionar `jilmar.tex` como principal. Para integrar al documento grupal, usar los archivos de `secciones/` mediante `\input` y conservar la bibliografía y los paquetes del documento individual.
+En Overleaf, subir `informe/`, compilar `caratula.tex` y guardar su PDF como `entrega/Entrega_SGA_FORM-AC-01.pdf`; después seleccionar `informe.tex` como principal. Para integrar al documento grupal, usar los archivos de `secciones/` mediante `\input` y conservar la bibliografía y los paquetes del documento individual.
 
 ## Pendientes del equipo
 
