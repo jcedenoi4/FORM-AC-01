@@ -1,0 +1,21 @@
+\section*{Lecciones para el proyecto propio}
+Estas son aplicaciones propuestas al PFC, no hechos ocurridos en UTEQ. Se derivan del defecto latente, su activación mediante una configuración válida y su propagación amplia en Fastly~\cite{fastly2021}.
+
+\begingroup
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\linewidth}{@{}YY@{}}
+\toprule
+Riesgo y consecuencia & Medida preventiva comprobable en TA-PFC-E1 \\
+\midrule
+\textbf{Sistema de Pre-Sustentaciones:} un archivo válido activa un defecto de subida y bloquea el envío de solicitudes. Analogía: entrada válida que activa un defecto latente~\cite{fastly2021}.
+& Definir límites de archivos y probar sus valores frontera. Simular caída del almacenamiento; comprobar que la solicitud queda en borrador, sin confirmación falsa, y permite completar el envío al reintentar. \\
+\addlinespace
+\textbf{Sistema de Pre-Sustentaciones:} un cambio válido en reglas de aprobación activa un defecto común; coordinación pierde acceso a la revisión. Analogía: configuración desencadenante~\cite{fastly2021}.
+& Versionar las reglas y probar solicitudes de cada estado antes de activarlas. Inyectar una regla defectuosa y demostrar el retorno a la versión anterior conservando los estados en PostgreSQL. \\
+\addlinespace
+\textbf{Sistema de Pre-Sustentaciones:} un defecto compartido de configuración en documentos bloquea también el registro de notas. Analogía: alcance amplio de un mismo defecto~\cite{fastly2021}.
+& Proponer aislamiento entre documentos y evaluación. En el prototipo, detener documentos y comprobar que un docente autenticado puede registrar una nota y consultarla en PostgreSQL. \\
+\bottomrule
+\end{tabularx}
+\endgroup
