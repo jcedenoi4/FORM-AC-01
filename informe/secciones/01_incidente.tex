@@ -1,0 +1,22 @@
+\section*{Descripción del incidente y línea de tiempo}
+Fastly ofrece una red de distribución de contenido (CDN): sus servidores distribuidos entregan contenido de los sitios clientes. El 8 de junio de 2021, un cambio válido de configuración activó un defecto introducido en un despliegue iniciado el 12 de mayo. El 85\,\% de la red devolvió errores. El informe indica operación normal del 95\,\% de la red en 49 minutos; esto no equivale al cierre total del incidente~\cite{fastly2021}.
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{@{}llY@{}}
+\toprule
+Hora & Zona & Acontecimiento del 8 de junio de 2021 \\
+\midrule
+09:47 & UTC & Inicio de la interrupción global. \\
+09:48 & UTC & El monitoreo detecta el fallo. \\
+09:58 & UTC & Publicación del aviso de estado. \\
+10:27 & UTC & Ingeniería identifica la configuración desencadenante. \\
+10:36 & UTC & Los servicios afectados comienzan a recuperarse. \\
+11:00 & UTC & La mayoría de los servicios se ha recuperado. \\
+12:35 & UTC & Incidente mitigado. \\
+12:44 & UTC & Aviso de estado marcado como resuelto. \\
+17:25 & UTC & Comienza el despliegue de la corrección permanente. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+\textbf{Duración:} desde las 09:47 hasta la mitigación transcurren 2 h 48 min; hasta el cierre del aviso, 2 h 57 min. Son diferencias calculadas entre las horas oficiales, no una caída uniforme de toda la red. Fuente de la tabla: Fastly~\cite{fastly2021}. Ecuador continental: UTC$-$5.
