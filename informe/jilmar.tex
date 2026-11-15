@@ -1,0 +1,22 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[margin=1.8cm]{geometry}
+\usepackage{array,tabularx,booktabs}
+\usepackage{pdfpages}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\begin{document}
+\includepdf[pages=1]{entrega/Entrega_SGA_FORM-AC-01.pdf}
+\setcounter{page}{1}
+\input{secciones/01_incidente}
+\input{secciones/05_lecciones_jilmar}
+\clearpage
+\section*{Declaración de uso de inteligencia artificial}
+Se utilizó ChatGPT (OpenAI) para apoyar la redacción, proponer riesgos y organizar los archivos LaTeX. Los datos del incidente se contrastaron con el informe oficial. Las medidas propuestas deberán revisarse por el equipo e incorporarse y comprobarse en TA-PFC-E1.
+\bibliographystyle{plain}
+\bibliography{referencias}
+\end{document}
