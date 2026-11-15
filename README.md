@@ -9,7 +9,7 @@ No hay un PFC único del equipo: los riesgos se agrupan por proyecto, como pide 
 |---|---|---|
 | CEDEÑO INTRIAGO JILMAR JESUS | Descripción y línea de tiempo | Sistema de Gestión de Pre-Sustentaciones |
 | MENDOZA BERMELLO ANGELLO AGUSTIN | Causas raíz y diagrama | SGIRI — Sistema de Gestión de Incidencias |
-| SANCHEZ VERA DARWIN JOEL | Unidad 1 | por confirmar |
+| SANCHEZ VERA DARWIN JOEL | Relación con la Unidad 1 | Sistema de Gestión de Pre-Sustentaciones |
 | ZAMBRANO TRIVIÑO LEONEL LEONIDAS | Impacto y mitigación | por confirmar |
 
 ## Archivos
