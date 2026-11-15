@@ -1,0 +1,259 @@
+<mxfile host="app.diagrams.net" agent="form-ac-01" version="24.7.17" type="device">
+  <diagram id="fastly-causas" name="Causas raíz Fastly 2021">
+    <mxGraphModel dx="643" dy="483" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="643" pageHeight="483" math="0" shadow="0" background="#FFFFFF">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="titulo" value="Diagrama de Ishikawa — causas del fallo global de Fastly (8 de junio de 2021)" style="text;html=1;align=center;verticalAlign=middle;fontSize=12.0;fontStyle=1;fontFamily=Helvetica;fontColor=#212121;" vertex="1" parent="1">
+          <mxGeometry x="0.0" y="12.0" width="642.67" height="17.33" as="geometry"/>
+        </mxCell>
+        <mxCell id="espina" style="endArrow=block;endFill=1;html=1;strokeColor=#525252;strokeWidth=3.4;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="13.33" y="240.0" as="sourcePoint"/>
+            <mxPoint x="509.33" y="240.0" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="espina_0" style="endArrow=none;html=1;strokeColor=#525252;strokeWidth=2.1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82.67" y="240.0" as="sourcePoint"/>
+            <mxPoint x="216.0" y="66.67" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="espina_1" style="endArrow=none;html=1;strokeColor=#525252;strokeWidth=2.1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="232.0" y="240.0" as="sourcePoint"/>
+            <mxPoint x="365.33" y="66.67" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="espina_2" style="endArrow=none;html=1;strokeColor=#525252;strokeWidth=2.1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="381.33" y="240.0" as="sourcePoint"/>
+            <mxPoint x="514.67" y="66.67" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="espina_3" style="endArrow=none;html=1;strokeColor=#525252;strokeWidth=2.1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="157.33" y="240.0" as="sourcePoint"/>
+            <mxPoint x="290.67" y="413.33" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="espina_4" style="endArrow=none;html=1;strokeColor=#525252;strokeWidth=2.1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="306.67" y="240.0" as="sourcePoint"/>
+            <mxPoint x="440.0" y="413.33" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="espina_5" style="endArrow=none;html=1;strokeColor=#525252;strokeWidth=2.1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="456.0" y="240.0" as="sourcePoint"/>
+            <mxPoint x="589.33" y="413.33" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="causa_0" value="El cliente aplica un&lt;br&gt;cambio válido sin&lt;br&gt;clasificar su riesgo" style="rounded=1;arcSize=12;whiteSpace=nowrap;html=1;fillColor=#FBF0E7;strokeColor=#D96B0F;fontSize=9.2;fontFamily=Helvetica;fontColor=#212121;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="9.33" y="172.24" width="104.0" height="38.45" as="geometry"/>
+        </mxCell>
+        <mxCell id="guia_0" style="endArrow=none;html=1;strokeColor=#8C8C8C;strokeWidth=0.75;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="113.33" y="191.47" as="sourcePoint"/>
+            <mxPoint x="120.0" y="191.47" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="causa_1" value="Las pruebas del 12 de&lt;br&gt;mayo no cubrieron&lt;br&gt;esa combinación" style="rounded=1;arcSize=12;whiteSpace=nowrap;html=1;fillColor=#F5EAE9;strokeColor=#9E291F;fontSize=9.2;fontFamily=Helvetica;fontColor=#212121;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="42.67" y="128.91" width="104.0" height="38.45" as="geometry"/>
+        </mxCell>
+        <mxCell id="guia_1" style="endArrow=none;html=1;strokeColor=#8C8C8C;strokeWidth=0.75;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="146.67" y="148.13" as="sourcePoint"/>
+            <mxPoint x="153.33" y="148.13" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="causa_2" value="Diagnóstico manual:&lt;br&gt;40 min para aislar la&lt;br&gt;configuración" style="rounded=1;arcSize=12;whiteSpace=nowrap;html=1;fillColor=#E9EFF4;strokeColor=#215C8F;fontSize=9.2;fontFamily=Helvetica;fontColor=#212121;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="76.0" y="85.57" width="104.0" height="38.45" as="geometry"/>
+        </mxCell>
+        <mxCell id="guia_2" style="endArrow=none;html=1;strokeColor=#8C8C8C;strokeWidth=0.75;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180.0" y="104.8" as="sourcePoint"/>
+            <mxPoint x="186.67" y="104.8" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="causa_3" value="Despliegue del 12 de&lt;br&gt;mayo sin canario ni&lt;br&gt;anillos" style="rounded=1;arcSize=12;whiteSpace=nowrap;html=1;fillColor=#E9EFF4;strokeColor=#215C8F;fontSize=9.2;fontFamily=Helvetica;fontColor=#212121;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="158.67" y="172.24" width="104.0" height="38.45" as="geometry"/>
+        </mxCell>
+        <mxCell id="guia_3" style="endArrow=none;html=1;strokeColor=#8C8C8C;strokeWidth=0.75;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="262.67" y="191.47" as="sourcePoint"/>
+            <mxPoint x="269.33" y="191.47" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="causa_4" value="Sin matriz de pruebas&lt;br&gt;configuración ×&lt;br&gt;software" style="rounded=1;arcSize=12;whiteSpace=nowrap;html=1;fillColor=#F5EAE9;strokeColor=#9E291F;fontSize=9.2;fontFamily=Helvetica;fontColor=#212121;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="192.0" y="128.91" width="104.0" height="38.45" as="geometry"/>
+        </mxCell>
+        <mxCell id="guia_4" style="endArrow=none;html=1;strokeColor=#8C8C8C;strokeWidth=0.75;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="296.0" y="148.13" as="sourcePoint"/>
+            <mxPoint x="302.67" y="148.13" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="causa_5" value="Rollback global no&lt;br&gt;automatizado ante la&lt;br&gt;caída" style="rounded=1;arcSize=12;whiteSpace=nowrap;html=1;fillColor=#E9EFF4;strokeColor=#215C8F;fontSize=9.2;fontFamily=Helvetica;fontColor=#212121;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="225.33" y="85.57" width="104.0" height="38.45" as="geometry"/>
+        </mxCell>
+        <mxCell id="guia_5" style="endArrow=none;html=1;strokeColor=#8C8C8C;strokeWidth=0.75;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="329.33" y="104.8" as="sourcePoint"/>
+            <mxPoint x="336.0" y="104.8" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="causa_6" value="Defecto sin guarda en&lt;br&gt;el propio código de&lt;br&gt;borde" style="rounded=1;arcSize=12;whiteSpace=nowrap;html=1;fillColor=#F5EAE9;strokeColor=#9E291F;fontSize=9.2;fontFamily=Helvetica;fontColor=#212121;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="308.0" y="172.24" width="104.0" height="38.45" as="geometry"/>
+        </mxCell>
+        <mxCell id="guia_6" style="endArrow=none;html=1;strokeColor=#8C8C8C;strokeWidth=0.75;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="412.0" y="191.47" as="sourcePoint"/>
+            <mxPoint x="418.67" y="191.47" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="causa_7" value="El POP aborta el&lt;br&gt;proceso en vez de&lt;br&gt;degradar" style="rounded=1;arcSize=12;whiteSpace=nowrap;html=1;fillColor=#F5EAE9;strokeColor=#9E291F;fontSize=9.2;fontFamily=Helvetica;fontColor=#212121;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="341.33" y="128.91" width="104.0" height="38.45" as="geometry"/>
+        </mxCell>
+        <mxCell id="guia_7" style="endArrow=none;html=1;strokeColor=#8C8C8C;strokeWidth=0.75;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="445.33" y="148.13" as="sourcePoint"/>
+            <mxPoint x="452.0" y="148.13" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="causa_8" value="Configuración idéntica&lt;br&gt;en el 100 % de los&lt;br&gt;POP" style="rounded=1;arcSize=12;whiteSpace=nowrap;html=1;fillColor=#E9EFF4;strokeColor=#215C8F;fontSize=9.2;fontFamily=Helvetica;fontColor=#212121;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="374.67" y="85.57" width="104.0" height="38.45" as="geometry"/>
+        </mxCell>
+        <mxCell id="guia_8" style="endArrow=none;html=1;strokeColor=#8C8C8C;strokeWidth=0.75;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="478.67" y="104.8" as="sourcePoint"/>
+            <mxPoint x="485.33" y="104.8" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="causa_9" value="Combinación no&lt;br&gt;prevista de&lt;br&gt;parámetros válidos" style="rounded=1;arcSize=12;whiteSpace=nowrap;html=1;fillColor=#FBF0E7;strokeColor=#D96B0F;fontSize=9.2;fontFamily=Helvetica;fontColor=#212121;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="84.0" y="269.31" width="104.0" height="38.45" as="geometry"/>
+        </mxCell>
+        <mxCell id="guia_9" style="endArrow=none;html=1;strokeColor=#8C8C8C;strokeWidth=0.75;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="188.0" y="288.53" as="sourcePoint"/>
+            <mxPoint x="194.67" y="288.53" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="causa_10" value="Sin validación&lt;br&gt;semántica de&lt;br&gt;combinaciones" style="rounded=1;arcSize=12;whiteSpace=nowrap;html=1;fillColor=#F5EAE9;strokeColor=#9E291F;fontSize=9.2;fontFamily=Helvetica;fontColor=#212121;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="117.33" y="312.64" width="104.0" height="38.45" as="geometry"/>
+        </mxCell>
+        <mxCell id="guia_10" style="endArrow=none;html=1;strokeColor=#8C8C8C;strokeWidth=0.75;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="221.33" y="331.87" as="sourcePoint"/>
+            <mxPoint x="228.0" y="331.87" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="causa_11" value="Propagación a toda la&lt;br&gt;red en segundos" style="rounded=1;arcSize=12;whiteSpace=nowrap;html=1;fillColor=#E9EFF4;strokeColor=#215C8F;fontSize=9.2;fontFamily=Helvetica;fontColor=#212121;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="150.67" y="361.49" width="104.0" height="27.41" as="geometry"/>
+        </mxCell>
+        <mxCell id="guia_11" style="endArrow=none;html=1;strokeColor=#8C8C8C;strokeWidth=0.75;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="254.67" y="375.2" as="sourcePoint"/>
+            <mxPoint x="261.33" y="375.2" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="causa_12" value="Detección en &lt;1 min,&lt;br&gt;pero sin señal de la&lt;br&gt;causa" style="rounded=1;arcSize=12;whiteSpace=nowrap;html=1;fillColor=#E9EFF4;strokeColor=#215C8F;fontSize=9.2;fontFamily=Helvetica;fontColor=#212121;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="233.33" y="269.31" width="104.0" height="38.45" as="geometry"/>
+        </mxCell>
+        <mxCell id="guia_12" style="endArrow=none;html=1;strokeColor=#8C8C8C;strokeWidth=0.75;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="337.33" y="288.53" as="sourcePoint"/>
+            <mxPoint x="344.0" y="288.53" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="causa_13" value="Sin correlación entre&lt;br&gt;el cambio y la caída" style="rounded=1;arcSize=12;whiteSpace=nowrap;html=1;fillColor=#E9EFF4;strokeColor=#215C8F;fontSize=9.2;fontFamily=Helvetica;fontColor=#212121;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="266.67" y="318.16" width="104.0" height="27.41" as="geometry"/>
+        </mxCell>
+        <mxCell id="guia_13" style="endArrow=none;html=1;strokeColor=#8C8C8C;strokeWidth=0.75;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370.67" y="331.87" as="sourcePoint"/>
+            <mxPoint x="377.33" y="331.87" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="causa_14" value="Aviso de estado sin&lt;br&gt;diagnóstico asociado" style="rounded=1;arcSize=12;whiteSpace=nowrap;html=1;fillColor=#E9EFF4;strokeColor=#215C8F;fontSize=9.2;fontFamily=Helvetica;fontColor=#212121;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="300.0" y="361.49" width="104.0" height="27.41" as="geometry"/>
+        </mxCell>
+        <mxCell id="guia_14" style="endArrow=none;html=1;strokeColor=#8C8C8C;strokeWidth=0.75;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="404.0" y="375.2" as="sourcePoint"/>
+            <mxPoint x="410.67" y="375.2" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="causa_15" value="27 días latente sin&lt;br&gt;llegar a activarse" style="rounded=1;arcSize=12;whiteSpace=nowrap;html=1;fillColor=#E9EFF4;strokeColor=#215C8F;fontSize=9.2;fontFamily=Helvetica;fontColor=#212121;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="382.67" y="274.83" width="104.0" height="27.41" as="geometry"/>
+        </mxCell>
+        <mxCell id="guia_15" style="endArrow=none;html=1;strokeColor=#8C8C8C;strokeWidth=0.75;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="486.67" y="288.53" as="sourcePoint"/>
+            <mxPoint x="493.33" y="288.53" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="causa_16" value="Un solo proveedor&lt;br&gt;CDN concentra miles&lt;br&gt;de sitios" style="rounded=1;arcSize=12;whiteSpace=nowrap;html=1;fillColor=#E9EFF4;strokeColor=#215C8F;fontSize=9.2;fontFamily=Helvetica;fontColor=#212121;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="416.0" y="312.64" width="104.0" height="38.45" as="geometry"/>
+        </mxCell>
+        <mxCell id="guia_16" style="endArrow=none;html=1;strokeColor=#8C8C8C;strokeWidth=0.75;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520.0" y="331.87" as="sourcePoint"/>
+            <mxPoint x="526.67" y="331.87" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="causa_17" value="Sitios sin plan de&lt;br&gt;contingencia&lt;br&gt;multi-CDN" style="rounded=1;arcSize=12;whiteSpace=nowrap;html=1;fillColor=#E9EFF4;strokeColor=#215C8F;fontSize=9.2;fontFamily=Helvetica;fontColor=#212121;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="449.33" y="355.97" width="104.0" height="38.45" as="geometry"/>
+        </mxCell>
+        <mxCell id="guia_17" style="endArrow=none;html=1;strokeColor=#8C8C8C;strokeWidth=0.75;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="553.33" y="375.2" as="sourcePoint"/>
+            <mxPoint x="560.0" y="375.2" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cat_0" value="PERSONAS" style="text;html=1;align=center;verticalAlign=middle;fontSize=10.9;fontStyle=1;fontFamily=Helvetica;fontColor=#212121;" vertex="1" parent="1">
+          <mxGeometry x="177.32" y="42.0" width="77.36" height="16.0" as="geometry"/>
+        </mxCell>
+        <mxCell id="cat_1" value="PROCESOS" style="text;html=1;align=center;verticalAlign=middle;fontSize=10.9;fontStyle=1;fontFamily=Helvetica;fontColor=#212121;" vertex="1" parent="1">
+          <mxGeometry x="326.35" y="42.0" width="77.97" height="16.0" as="geometry"/>
+        </mxCell>
+        <mxCell id="cat_2" value="TECNOLOGÍA" style="text;html=1;align=center;verticalAlign=middle;fontSize=10.9;fontStyle=1;fontFamily=Helvetica;fontColor=#212121;" vertex="1" parent="1">
+          <mxGeometry x="470.22" y="42.0" width="88.89" height="16.0" as="geometry"/>
+        </mxCell>
+        <mxCell id="cat_3" value="CONFIGURACIÓN" style="text;html=1;align=center;verticalAlign=middle;fontSize=10.9;fontStyle=1;fontFamily=Helvetica;fontColor=#212121;" vertex="1" parent="1">
+          <mxGeometry x="235.9" y="422.0" width="109.54" height="16.0" as="geometry"/>
+        </mxCell>
+        <mxCell id="cat_4" value="MEDICIÓN" style="text;html=1;align=center;verticalAlign=middle;fontSize=10.9;fontStyle=1;fontFamily=Helvetica;fontColor=#212121;" vertex="1" parent="1">
+          <mxGeometry x="404.67" y="422.0" width="70.67" height="16.0" as="geometry"/>
+        </mxCell>
+        <mxCell id="cat_5" value="ENTORNO" style="text;html=1;align=center;verticalAlign=middle;fontSize=10.9;fontStyle=1;fontFamily=Helvetica;fontColor=#212121;" vertex="1" parent="1">
+          <mxGeometry x="554.0" y="422.0" width="70.67" height="16.0" as="geometry"/>
+        </mxCell>
+        <mxCell id="efecto" value="&lt;b&gt;FALLO GLOBAL&lt;br&gt;DE LA RED FASTLY&lt;/b&gt;&lt;br&gt;8 de junio de 2021&lt;br&gt;85 % de la red con errores&lt;br&gt;95 % normal en 49 min&lt;br&gt;&lt;i&gt;Defecto latente activado&lt;br&gt;por una configuración&lt;br&gt;válida de cliente&lt;/i&gt;" style="rounded=1;arcSize=12;whiteSpace=nowrap;html=1;fillColor=#EDEDED;strokeColor=#404040;fontSize=9.3;fontFamily=Helvetica;fontColor=#212121;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="512.0" y="157.33" width="122.67" height="144.0" as="geometry"/>
+        </mxCell>
+        <mxCell id="leg_box_0" style="rounded=1;arcSize=15;html=1;fillColor=#F5EAE9;strokeColor=#9E291F;strokeWidth=0.9;" vertex="1" parent="1">
+          <mxGeometry x="16.0" y="459.47" width="10.93" height="9.87" as="geometry"/>
+        </mxCell>
+        <mxCell id="leg_txt_0" value="Defecto latente (raíz técnica)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;fontSize=8.5;fontStyle=2;fontFamily=Helvetica;fontColor=#212121;" vertex="1" parent="1">
+          <mxGeometry x="30.67" y="458.0" width="114.42" height="12.0" as="geometry"/>
+        </mxCell>
+        <mxCell id="leg_box_1" style="rounded=1;arcSize=15;html=1;fillColor=#FBF0E7;strokeColor=#D96B0F;strokeWidth=0.9;" vertex="1" parent="1">
+          <mxGeometry x="166.42" y="459.47" width="10.93" height="9.87" as="geometry"/>
+        </mxCell>
+        <mxCell id="leg_txt_1" value="Evento desencadenante" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;fontSize=8.5;fontStyle=2;fontFamily=Helvetica;fontColor=#212121;" vertex="1" parent="1">
+          <mxGeometry x="181.09" y="458.0" width="97.38" height="12.0" as="geometry"/>
+        </mxCell>
+        <mxCell id="leg_box_2" style="rounded=1;arcSize=15;html=1;fillColor=#E9EFF4;strokeColor=#215C8F;strokeWidth=0.9;" vertex="1" parent="1">
+          <mxGeometry x="299.8" y="459.47" width="10.93" height="9.87" as="geometry"/>
+        </mxCell>
+        <mxCell id="leg_txt_2" value="Factor agravante" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;fontSize=8.5;fontStyle=2;fontFamily=Helvetica;fontColor=#212121;" vertex="1" parent="1">
+          <mxGeometry x="314.47" y="458.0" width="69.84" height="12.0" as="geometry"/>
+        </mxCell>
+        <mxCell id="credito" value="Elaborado por A. Mendoza B. — FORM-AC-01" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;fontSize=8.5;fontStyle=2;fontFamily=Helvetica;fontColor=#212121;" vertex="1" parent="1">
+          <mxGeometry x="466.67" y="458.0" width="170.67" height="12.0" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
