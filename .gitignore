@@ -1,0 +1,18 @@
+# Artefactos de compilación LaTeX (se regeneran con pdflatex y bibtex)
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# PDF intermedios: los entregables se guardan en informe/entrega/
+informe/informe.pdf
+informe/caratula.pdf
+
+# Copia descartada del informe de Fastly (página web transcrita). Se ignora para que no
+# entre en un commit; el archivo se puede borrar del disco cuando deje de estar en uso.
+artículos científicos/00_fastly_2021_informe_oficial.pdf

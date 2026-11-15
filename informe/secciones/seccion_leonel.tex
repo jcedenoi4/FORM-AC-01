@@ -5,7 +5,7 @@
 % Citas: claves definidas en leonel.bib (pegar en el .bib del grupo)
 % ============================================================
 
-\section{Impacto cuantificado y mitigación}
+\section*{Impacto cuantificado y mitigación}
 
 \subsection*{Impacto cuantificado}
 
@@ -16,10 +16,10 @@
 \toprule
 \textbf{Indicador} & \textbf{Dato} & \textbf{Fuente} \\
 \midrule
-Red afectada & 85\,\% de la red devolvió errores & \cite{fastly2021summary} \\
+Red afectada & 85\,\% de la red devolvió errores & \cite{fastly2021} \\
 Clientes afectados & ``Casi todos'' los clientes de Fastly & \cite{fastly2021q2} \\
 Detección & Menos de 1 minuto & \cite{fastly2021q2} \\
-Recuperación parcial & 95\,\% de la red normal en 49 min & \cite{fastly2021summary} \\
+Recuperación parcial & 95\,\% de la red normal en 49 min & \cite{fastly2021} \\
 Sitios caídos (ejemplos) & Amazon, Reddit, NYTimes, eBay, gov.uk, Twitch & \cite{medina2021thousandeyes,cnbc2021q2} \\
 SLA & Créditos (compensaciones) a clientes; monto no publicado & \cite{fastly2021q2} \\
 Ingresos Q2 2021 & 85,1 M USD frente a 85,73 M esperados & \cite{cnbc2021q2} \\
@@ -45,17 +45,17 @@ su tráfico entre tres CDN, sacó a Fastly del camino hacia las 10:16 UTC
 \subsection*{Mitigación aplicada por la empresa}
 
 \textbf{Medidas inmediatas.} El monitoreo detectó el fallo en menos de un minuto
-y se publicó un aviso de estado a las 09:58 UTC \cite{fastly2021summary,fastly2021q2}.
+y se publicó un aviso de estado a las 09:58 UTC \cite{fastly2021,fastly2021q2}.
 A las 10:27 UTC ingeniería identificó la configuración del cliente que activaba el
-defecto \cite{fastly2021summary} y la deshabilitó, con lo que la red empezó a volver
+defecto \cite{fastly2021} y la deshabilitó, con lo que la red empezó a volver
 a la normalidad \cite{fastly2021tweet}. Con la red estable, se creó la corrección
-definitiva y su despliegue comenzó a las 17:25 UTC \cite{fastly2021summary}.
+definitiva y su despliegue comenzó a las 17:25 UTC \cite{fastly2021}.
 
 \textbf{Cambios permanentes.} Fastly anunció cuatro acciones: desplegar la
 corrección en toda la red de forma rápida y segura; hacer un \textit{post-mortem}
 completo de los procesos seguidos; averiguar por qué el defecto no se detectó en
 las pruebas y el control de calidad del despliegue del 12 de mayo; y reducir su
-tiempo de remediación \cite{fastly2021summary}. En agosto reiteró que seguía
+tiempo de remediación \cite{fastly2021}. En agosto reiteró que seguía
 implementando medidas para aumentar la resiliencia \cite{fastly2021q2}.
 
 \subsection*{Lecciones para el PFC de Leonel Zambrano}

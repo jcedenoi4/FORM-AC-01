@@ -1,19 +1,31 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage[spanish]{babel}
 \usepackage[margin=1.8cm]{geometry}
 \usepackage{array,tabularx,booktabs}
-\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{float}
 \usepackage[hidelinks]{hyperref}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{4pt}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \begin{document}
-\includepdf[pages=1]{entrega/Entrega_SGA_FORM-AC-01.pdf}
+% Carátula: se incluye la primera página de caratula.tex a página completa.
+% Se usa graphicx (clave page=) en lugar de pdfpages para no requerir paquetes extra.
+% 2pt menos de alto: si la imagen mide exactamente \paperheight, no cabe por
+% redondeo y LaTeX inserta una página en blanco antes de la carátula.
+\newgeometry{margin=0pt,noheadfoot}
+\thispagestyle{empty}%
+\noindent\includegraphics[page=1,width=\paperwidth,height=\dimexpr\paperheight-2pt\relax]{entrega/Entrega_SGA_FORM-AC-01.pdf}%
+\clearpage
+\restoregeometry
 \setcounter{page}{1}
 \input{secciones/01_incidente}
+\input{secciones/02_causas}
 \input{secciones/05_lecciones_pfc}
+\input{secciones/seccion_leonel}
 \clearpage
 \section*{Declaración de uso de inteligencia artificial}
 Se utilizó ChatGPT (OpenAI) para apoyar la redacción, proponer riesgos y organizar los archivos LaTeX. Los datos del incidente se contrastaron con el informe oficial. Las medidas propuestas deberán revisarse por el equipo e incorporarse y comprobarse en TA-PFC-E1.
