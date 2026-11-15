@@ -5,7 +5,7 @@
 % Citas: claves definidas en leonel.bib (pegar en el .bib del grupo)
 % ============================================================
 
-\section*{Impacto cuantificado y mitigación}
+\section{Impacto cuantificado y mitigación}
 
 \subsection*{Impacto cuantificado}
 
@@ -16,10 +16,10 @@
 \toprule
 \textbf{Indicador} & \textbf{Dato} & \textbf{Fuente} \\
 \midrule
-Red afectada & 85\,\% de la red devolvió errores & \cite{fastly2021} \\
+Red afectada & 85\,\% de la red devolvió errores & \cite{fastly2021summary} \\
 Clientes afectados & ``Casi todos'' los clientes de Fastly & \cite{fastly2021q2} \\
 Detección & Menos de 1 minuto & \cite{fastly2021q2} \\
-Recuperación parcial & 95\,\% de la red normal en 49 min & \cite{fastly2021} \\
+Recuperación parcial & 95\,\% de la red normal en 49 min & \cite{fastly2021summary} \\
 Sitios caídos (ejemplos) & Amazon, Reddit, NYTimes, eBay, gov.uk, Twitch & \cite{medina2021thousandeyes,cnbc2021q2} \\
 SLA & Créditos (compensaciones) a clientes; monto no publicado & \cite{fastly2021q2} \\
 Ingresos Q2 2021 & 85,1 M USD frente a 85,73 M esperados & \cite{cnbc2021q2} \\
@@ -45,22 +45,25 @@ su tráfico entre tres CDN, sacó a Fastly del camino hacia las 10:16 UTC
 \subsection*{Mitigación aplicada por la empresa}
 
 \textbf{Medidas inmediatas.} El monitoreo detectó el fallo en menos de un minuto
-y se publicó un aviso de estado a las 09:58 UTC \cite{fastly2021,fastly2021q2}.
+y se publicó un aviso de estado a las 09:58 UTC \cite{fastly2021summary,fastly2021q2}.
 A las 10:27 UTC ingeniería identificó la configuración del cliente que activaba el
-defecto \cite{fastly2021} y la deshabilitó, con lo que la red empezó a volver
+defecto \cite{fastly2021summary} y la deshabilitó, con lo que la red empezó a volver
 a la normalidad \cite{fastly2021tweet}. Con la red estable, se creó la corrección
-definitiva y su despliegue comenzó a las 17:25 UTC \cite{fastly2021}.
+definitiva y su despliegue comenzó a las 17:25 UTC \cite{fastly2021summary}.
 
 \textbf{Cambios permanentes.} Fastly anunció cuatro acciones: desplegar la
 corrección en toda la red de forma rápida y segura; hacer un \textit{post-mortem}
 completo de los procesos seguidos; averiguar por qué el defecto no se detectó en
 las pruebas y el control de calidad del despliegue del 12 de mayo; y reducir su
-tiempo de remediación \cite{fastly2021}. En agosto reiteró que seguía
+tiempo de remediación \cite{fastly2021summary}. En agosto reiteró que seguía
 implementando medidas para aumentar la resiliencia \cite{fastly2021q2}.
 
-\subsection*{Lecciones para el PFC de Leonel Zambrano}
+\subsection*{Lecciones para el PFC: Gestión de documentación para la titulación}
 
-% >>> AJUSTAR: reemplazar los nombres genéricos por los componentes reales del PFC
+El PFC es un sistema web (Angular 16, Spring Boot 3, PostgreSQL 15) con autenticación
+JWT, \textit{datasource} dinámico y almacenamiento de archivos en Azure Blob Storage,
+y exige una disponibilidad mínima del 95\,\% durante el período académico.
+
 \begin{table}[h]
 \centering
 \small
@@ -68,17 +71,17 @@ implementando medidas para aumentar la resiliencia \cite{fastly2021q2}.
 \toprule
 \textbf{Riesgo} & \textbf{Consecuencia} & \textbf{Medida preventiva (TA-PFC-E1)} \\
 \midrule
-Desplegar una nueva versión en todos los nodos a la vez &
-Un error latente tumba todos los nodos al mismo tiempo, como el defecto del 12 de mayo &
-Despliegue escalonado: primero un nodo, verificar, luego el resto; con reversión (\textit{rollback}) preparada \\
-
-Aceptar cambios de configuración sin validarlos &
-Una configuración válida pero no probada activa un error y se propaga a todo el sistema &
-Validar la configuración contra un esquema y probarla en un entorno de pruebas antes de aplicarla \\
-
-Depender de un solo proveedor externo (nube, CDN o servicio de mensajería) &
-Si el proveedor cae, cae todo el proyecto, como Reddit con Fastly &
-Plan de respaldo documentado: proveedor o ruta alternativa y cambio de DNS, como hizo NYTimes \\
+Una configuración válida del \textit{datasource} dinámico activa un error no probado al resolver la conexión &
+Todas las peticiones protegidas fallan para todos los roles, como la configuración del cliente en Fastly &
+Validar cada configuración al arrancar, probarla en un entorno de pruebas y usar un \textit{datasource} por defecto si falla \\
+\addlinespace
+Desplegar una nueva versión del backend sin pruebas del flujo de autenticación (filtro JWT y \texttt{SecurityConfig}) &
+Un error latente impide iniciar sesión a todos los usuarios, como el defecto del 12 de mayo &
+Pruebas automáticas del inicio de sesión antes de cada despliegue y conservar la versión anterior para revertir \\
+\addlinespace
+Depender solo de Azure Blob Storage para los archivos subidos &
+Si Azure falla o caduca la cadena de conexión, nadie puede subir documentos en plena etapa de titulación &
+Tiempo límite y reintentos en \texttt{ImageStorageService}, mensaje de error claro al usuario y almacenamiento local temporal como respaldo \\
 \bottomrule
 \end{tabular}
 \caption{Riesgos del PFC inspirados en el incidente de Fastly.}
